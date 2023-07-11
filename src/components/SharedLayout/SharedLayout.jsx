@@ -12,9 +12,7 @@ import { Container,
     ContactImg,
     SochialList,
     Button,
-    Navigation,
-    NavigationList,
-    NavigationLink,
+    
     
 } from "./SharedLayout.styled";
 
@@ -24,6 +22,9 @@ import phoneImg from '../../img/carbon_phone.svg'
 import instagramIcon from '../../img/ant-design_instagram-filled.svg'
 import telegramIcon from '../../img/akar-icons_telegram-fill.svg'
 import youtubeIcon from '../../img/ri_youtube-fill.svg'
+import { NavBar } from "components/NavBar/Navbar";
+import { About } from "components/About/About";
+import { Price } from "components/Price/Price";
 
 
 export const SharedLayout =()=>{
@@ -94,18 +95,10 @@ export const SharedLayout =()=>{
                   <Button type="button">Замовити дзвінок</Button>
 
             </Header>
-            <Navigation>
-                <NavigationList>
-                    <li>
-                        <NavigationLink href="/">Про клініку</NavigationLink>
-
-                    </li>
-                    <li> <NavigationLink href="/">Наші послуги</NavigationLink></li>
-                    <li><NavigationLink href="/">Прайс</NavigationLink></li>
-                    <li><NavigationLink href="/">Наші лікарі</NavigationLink></li>
-                    <li><NavigationLink href="/">Акції</NavigationLink></li>
-                </NavigationList>
-            </Navigation>
+            <NavBar/>
+            <About/>
+            <Price/>
+            
         </Container>
     )
 }
