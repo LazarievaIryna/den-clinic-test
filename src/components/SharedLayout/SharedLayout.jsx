@@ -10,7 +10,7 @@ import { Container,
     ContactItem, 
     ContactLink,
     ContactImg,
-    SochialList,
+    
     Button,
     
     
@@ -19,12 +19,12 @@ import { Container,
 import logo from '../../img/fa6-solid_tooth.svg'
 import logoText from '../../img/Vector.svg'
 import phoneImg from '../../img/carbon_phone.svg'
-import instagramIcon from '../../img/ant-design_instagram-filled.svg'
-import telegramIcon from '../../img/akar-icons_telegram-fill.svg'
-import youtubeIcon from '../../img/ri_youtube-fill.svg'
+
 import { NavBar } from "components/NavBar/Navbar";
 import { About } from "components/About/About";
 import { Price } from "components/Price/Price";
+import { Footer } from "components/Footer/Footer";
+import { SocialList } from "components/SocialList/SocialList";
 
 
 export const SharedLayout =()=>{
@@ -72,32 +72,15 @@ export const SharedLayout =()=>{
                     (098)251 01 11</ContactLink>
                     </ContactItem>
                   </ContactWrapper>
-                  <SochialList>
-                    <li>
-                    <a  href="https://www.instagram.com/" target="_blank"
-                  rel="noopener noreferrer nofollow"> 
-                    <img src={instagramIcon} alt="instagramIcon"/>
-                  </a>
-                    </li>
-                    <li>
-                    <a  href="https://desktop.telegram.org/?setln=en" target="_blank"
-                  rel="noopener noreferrer nofollow"> 
-                    <img src={telegramIcon} alt="telegramIcon"/>
-                  </a>
-                    </li>
-                    <li>
-                    <a  href="https://www.youtube.com/" target="_blank"
-                  rel="noopener noreferrer nofollow"> 
-                    <img src={youtubeIcon} alt="youtubeIcon"/>
-                  </a>
-                    </li>
-                  </SochialList>
+                  <SocialList/>
+                  
                   <Button type="button">Замовити дзвінок</Button>
 
             </Header>
             <NavBar/>
             <About/>
             <Price/>
+            <Footer/>
             
         </Container>
     )

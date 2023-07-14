@@ -74,14 +74,11 @@ align-items: center;
 export const ContactImg=styled.img`
 margin-right: 5px;
 `;
-export const SochialList=styled.ul`
-display: flex;
-column-gap: 10px;
-margin-right: 123px;
-`;
+
 export const Button=styled.button`
 width: 242px;
 height: 40px;
+margin-left: 123px;
 background-color: #39ADE0;
 border: solid 1px ;
 border-color: #FBFDFF;
