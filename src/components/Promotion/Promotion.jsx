@@ -1,9 +1,8 @@
 import { Wrapper } from "components/Utils/utils.styled"
-
-export const AboutClinic=()=>{
+export const Promotion=()=>{
     return(
         <Wrapper>
-            <p>Про клініку</p>
+            <p>Акції</p>
         </Wrapper>
     )
 }

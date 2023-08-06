@@ -1,4 +1,4 @@
-const Registration =()=>{
+export const Registration =()=>{
     return(
         <p>Registration page </p>
     )

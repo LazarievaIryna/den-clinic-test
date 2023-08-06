@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
 
@@ -17,7 +18,7 @@ export const Header = styled.header`
  /* padding: 15px 197px 15px 197px; */
  
 `;
-export const LogoWrapper = styled.p`
+export const LogoWrapper = styled(NavLink)`
   font-weight: 700;
   margin: 0;
   margin-right: 76px;

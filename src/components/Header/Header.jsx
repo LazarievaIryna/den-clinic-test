@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import { 
     Header,
     LogoWrapper, 
@@ -19,11 +21,23 @@ import { SocialList } from "components/SocialList/SocialList";
 import logo from '../../img/fa6-solid_tooth.svg'
 import logoText from '../../img/Vector.svg'
 import phoneImg from '../../img/carbon_phone.svg'
+import { Modal } from 'components/Modal/Modal';
 
 export const HeaderPage=()=>{
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
     return(<>
         <Header>
-        <LogoWrapper>
+        <LogoWrapper to="/" end>
         <Logo src={logo} alt="logo"/>
         <img src={logoText} alt="den clinic logo"/>
           </LogoWrapper>
@@ -66,7 +80,8 @@ export const HeaderPage=()=>{
           </ContactWrapper>
           <SocialList/>
           
-          <Button type="button">Замовити дзвінок</Button>
+          <Button type="button" onClick={()=>{setIsModalOpen(true)}}>Замовити дзвінок</Button>
+          {isModalOpen && <Modal/>}
 
     </Header>
     </>

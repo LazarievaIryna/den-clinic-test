@@ -1,5 +1,6 @@
 import {  useState } from "react"
 import {Wrapper, Button, ContainerPrice, PriceItem, Title} from './Price.styled'
+// import { Wrapper } from "components/Utils/utils.styled"
 import ButtonDown from '../../img/VectorDown.png'
 import ButtonUp from '../../img/VectorUp.png'
 import price from '../Dataset/price.json'

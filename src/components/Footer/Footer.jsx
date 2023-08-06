@@ -7,20 +7,20 @@ import { SocialList } from 'components/SocialList/SocialList'
 export const Footer =()=>{
     return(
         <Wrapper>
-<LogoWrapper>
+                <LogoWrapper to="/" end>
                 <Logo src={logo} alt="logo"/>
                 <img src={logoText} alt="den clinic logo"/>
                   </LogoWrapper>
                   <AboutList>
-                    <Link>Про клініку</Link>
-                    <Link>Наші послуги</Link>
+                    <Link to="/aboutclinic">Про клініку</Link>
+                    <Link to="/services">Наші послуги</Link>
                   </AboutList>
                   <LinkList>
-                    <Link>Прайс</Link>
-                    <Link>Наші лікарі</Link>
+                    <Link to="/pricenavbar">Прайс</Link>
+                    <Link to="/staff">Наші лікарі</Link>
                   </LinkList>
                   <PromotionWrapper>
-                    <Link>Акції</Link>
+                    <Link to="/promotion">Акції</Link>
                   </PromotionWrapper>
                   <SocialList/>
                   <LicenseWrapper>

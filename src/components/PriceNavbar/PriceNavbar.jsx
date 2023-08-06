@@ -1,9 +1,8 @@
 import { Wrapper } from "components/Utils/utils.styled"
-
-export const AboutClinic=()=>{
+export const PriceNavbar=()=>{
     return(
         <Wrapper>
-            <p>Про клініку</p>
+            <p>Прайс на послуги</p>
         </Wrapper>
     )
 }

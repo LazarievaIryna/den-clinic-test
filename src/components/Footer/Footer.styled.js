@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
  
@@ -14,7 +15,7 @@ display: flex;
 
  
 `;
-export const LogoWrapper = styled.p`
+export const LogoWrapper = styled(NavLink)`
   font-weight: 700;
   margin: 0;
   margin-right: 89px;
@@ -22,7 +23,8 @@ export const LogoWrapper = styled.p`
 `;
 export const Logo= styled.img`
 margin-right: 6px;`;
-export const Link= styled.p`
+
+export const Link= styled(NavLink)`
 font-size:16px;
 color: #FBFDFF;
 `;

@@ -1,8 +1,10 @@
+import { Wrapper } from "components/Utils/utils.styled"
+
 export const ServiceThird=()=>{
     return(
-        <div>
+        <Wrapper>
         <h2>Імплантація зубів</h2>
         <div>Імплантація зубів</div>
-        </div>
+        </Wrapper>
     )
 }
