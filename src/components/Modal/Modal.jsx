@@ -1,6 +1,8 @@
 import { DateTimePicker } from 'components/Utils/DateTimePicker'
 import {ModalWrapper, ModalContent} from './Modal.styled'
 export const Modal=()=>{
+    
+
     return(
         <ModalWrapper>
             <ModalContent>
