@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/den-clinic-test/static/css/main.b5320759.css",
-    "main.js": "/den-clinic-test/static/js/main.e084ee70.js",
+    "main.css": "/den-clinic-test/static/css/main.fa535f30.css",
+    "main.js": "/den-clinic-test/static/js/main.9328e9d8.js",
     "static/media/Rectangle 109.jpg": "/den-clinic-test/static/media/Rectangle 109.846dc4e92a1bd624e303.jpg",
     "static/media/Vector.svg": "/den-clinic-test/static/media/Vector.d70c167e88fb0155ee4433e96d7a9e14.svg",
     "static/media/ant-design_instagram-filled.svg": "/den-clinic-test/static/media/ant-design_instagram-filled.afbc399e07e295287e8d87d83903fbff.svg",
+    "index.html": "/den-clinic-test/index.html",
     "static/media/carbon_phone.svg": "/den-clinic-test/static/media/carbon_phone.0c1a5e51b57d16676443a6bd181f342c.svg",
     "static/media/akar-icons_telegram-fill.svg": "/den-clinic-test/static/media/akar-icons_telegram-fill.f9f4e7c24eddda122e5a35ca374f1203.svg",
-    "index.html": "/den-clinic-test/index.html",
     "static/media/fa6-solid_tooth.svg": "/den-clinic-test/static/media/fa6-solid_tooth.8a09aa0381bcf0c4d972f86ce8ee532e.svg",
     "static/media/ri_youtube-fill.svg": "/den-clinic-test/static/media/ri_youtube-fill.e52e7175c229e06438f2db1f2c73cc82.svg",
-    "main.b5320759.css.map": "/den-clinic-test/static/css/main.b5320759.css.map",
-    "main.e084ee70.js.map": "/den-clinic-test/static/js/main.e084ee70.js.map"
+    "main.fa535f30.css.map": "/den-clinic-test/static/css/main.fa535f30.css.map",
+    "main.9328e9d8.js.map": "/den-clinic-test/static/js/main.9328e9d8.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5320759.css",
-    "static/js/main.e084ee70.js"
+    "static/css/main.fa535f30.css",
+    "static/js/main.9328e9d8.js"
   ]
 }
