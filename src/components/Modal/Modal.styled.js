@@ -8,9 +8,14 @@ position: fixed;
   display: flex;
   justify-content: center;
     align-items: center;
+   
 `
 export const ModalContent=styled.div`
   position: absolute;
   padding: 20px;
   background-color: #fff;
+  border-radius: 8px;
+`
+export const Label=styled.div`
+font-size: 18px;
 `
