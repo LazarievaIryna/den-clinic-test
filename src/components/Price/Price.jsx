@@ -9,7 +9,7 @@ import price from '../Dataset/price.json'
 export const Price=()=>{
 const [visible, setVisible]=useState(false)
 const [show, setShow]=useState(false)
-console.log(price)
+// console.log(price)
 
 
     return(

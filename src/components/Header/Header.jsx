@@ -26,15 +26,12 @@ import { Modal } from 'components/Modal/Modal';
 export const HeaderPage=()=>{
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+ 
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-
+  
     return(<>
         <Header>
         <LogoWrapper to="/" end>
@@ -81,7 +78,7 @@ export const HeaderPage=()=>{
           <SocialList/>
           
           <Button type="button" onClick={()=>{setIsModalOpen(true)}}>Замовити дзвінок</Button>
-          {isModalOpen && <Modal/>}
+          {isModalOpen && <Modal onClose={closeModal} />}
 
     </Header>
     </>

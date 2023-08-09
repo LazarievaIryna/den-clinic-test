@@ -1,16 +1,27 @@
 import { useState } from 'react';
-import { Input } from 'components/About/About.styled';
-import {ModalWrapper, ModalContent, Label} from './Modal.styled'
-export const Modal=()=>{
+
+
+import {ModalWrapper, ModalContent, Label, Form, Title, Input, Button, ButtonWrapper, LabelNumber, NumberText, CloseIcon} from './Modal.styled'
+export const Modal=({onClose})=>{
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
+    const [disabled, setDisabled] = useState(false);
+
     const handleSubmit=event=>{
         event.preventDefault();
-        const user = {name, number};
-        console.log(user);
+ const user={name, number}
+ console.log(user)
+       
+        if(user){
+          setDisabled(true)
+        }
+        
         reset();
+        onClose(true)
     }
+    
     const handleNameChange = event => {
+
         setName(event.currentTarget.value);
       };
       const handleNumberChange = event => {
@@ -21,20 +32,22 @@ export const Modal=()=>{
         setNumber('');
 
     }
+   
 
     return(
         <ModalWrapper>
             <ModalContent>
-                <h2>Залиште Ваші контактні дані</h2>
-                <form>
+              <CloseIcon onClick={onClose}/>
+                <Title>Залиште Ваші контактні дані</Title>
+                <Form>
                 <Label>
             Ім'я
             <Input
               type="text"
               value={name}
-              placeholder='Ваше ім'я'%
+              placeholder='Ваше ім&apos;я'
               name="name"
-              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
               onChange={handleNameChange}
@@ -42,20 +55,27 @@ export const Modal=()=>{
           </Label>
           <Label>
             Телефон
+            <LabelNumber>
                 <Input
               type="tel"
+              minLength="10"
+              maxLength="10"
               name="number"
               value={number}
               placeholder='Ваш номер телефону'
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              pattern="^\d{10}$"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
               onChange={handleNumberChange}
               
             />
+            <NumberText>формат: 0930000000</NumberText>
+            </LabelNumber>
             </Label>
-            <button type='submit' onSubmit={handleSubmit}>Чекаю на дзвінок</button>
-            </form>
+            <ButtonWrapper>
+            <Button type="submit" disabled={disabled}  onSubmit={handleSubmit}>Чекаю на дзвінок</Button>
+            </ButtonWrapper>
+            </Form>
             </ModalContent>
             
         </ModalWrapper>
