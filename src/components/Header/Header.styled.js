@@ -34,6 +34,9 @@ text-decoration: none;
 font-style: normal;
 font-size: 16px;
 color: #FBFDFF;
+&:hover{
+  text-decoration: underline;
+}
 `;
 export const ListItem= styled.li`
 list-style: none;
@@ -82,4 +85,7 @@ border-radius: 4px;
 font-size: 18px;
 color: #FBFDFF;
 cursor: pointer;
+&:hover{
+  background-color: #1D779F;
+}
 `

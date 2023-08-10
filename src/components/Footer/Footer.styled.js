@@ -46,4 +46,14 @@ height: 47px;
 margin-right: 88px;
 `;
 export const LicenseWrapper=styled.div`
+margin-left: 88px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding-top: 4px;
+`
+export const FooterLinkList=styled.div`
+padding-top: 4px;
+display: flex;
+
 `

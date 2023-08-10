@@ -1,7 +1,8 @@
 import instagramIcon from '../../img/ant-design_instagram-filled.svg'
 import telegramIcon from '../../img/akar-icons_telegram-fill.svg'
 import youtubeIcon from '../../img/ri_youtube-fill.svg'
-import { SochialList } from './SocialList.styled'
+import { SochialList, SocialLink } from './SocialList.styled'
+
 
 export const SocialList=()=>{
     return (
@@ -9,7 +10,7 @@ export const SocialList=()=>{
                     <li>
                     <a  href="https://www.instagram.com/" target="_blank"
                   rel="noopener noreferrer nofollow"> 
-                    <img src={instagramIcon} alt="instagramIcon"/>
+                    <SocialLink src={instagramIcon} alt="instagramIcon" fill/>
                   </a>
                     </li>
                     <li>

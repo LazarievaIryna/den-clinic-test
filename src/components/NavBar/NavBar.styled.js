@@ -21,6 +21,9 @@ export const NavigationLink=styled(NavLink)`
 text-decoration: none;
 color: #133A4B;
 font-size: 16px;
+&:hover{
+    color: #39ADE0;
+}
 `;
 export const DropDown=styled.ul`
 display: flex;
@@ -39,5 +42,9 @@ export const Link=styled(NavLink)`
 
 font-size: 16px;
 color: #133A4B;
+&:hover{
+    color: #39ADE0;
+    text-decoration: underline;
+}
 
 `

@@ -39,7 +39,7 @@ export const Modal=({onClose})=>{
             <ModalContent>
               <CloseIcon onClick={onClose}/>
                 <Title>Залиште Ваші контактні дані</Title>
-                <Form>
+                <Form onSubmit={handleSubmit} >
                 <Label>
             Ім'я
             <Input
@@ -73,7 +73,7 @@ export const Modal=({onClose})=>{
             </LabelNumber>
             </Label>
             <ButtonWrapper>
-            <Button type="submit" disabled={disabled}  onSubmit={handleSubmit}>Чекаю на дзвінок</Button>
+            <Button type="submit" disabled={disabled}  >Чекаю на дзвінок</Button>
             </ButtonWrapper>
             </Form>
             </ModalContent>
