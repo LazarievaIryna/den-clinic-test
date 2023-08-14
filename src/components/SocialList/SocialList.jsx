@@ -1,30 +1,39 @@
-import instagramIcon from '../../img/ant-design_instagram-filled.svg'
-import telegramIcon from '../../img/akar-icons_telegram-fill.svg'
-import youtubeIcon from '../../img/ri_youtube-fill.svg'
-import { SochialList, SocialLink } from './SocialList.styled'
+// import { BiLogoInstagram } from "react-icons/bi";
+// import instagramIcon from '../../img/ant-design_instagram-filled (1).svg'
+// import telegramIcon from '../../img/akar-icons_telegram-fill.svg'
+// import youtubeIcon from '../../img/ri_youtube-fill.svg'
+import { SochialList,   Link, ListItem, SocialLink} from './SocialList.styled'
 
 
-export const SocialList=()=>{
+export const SocialList=(props)=>{
     return (
         <SochialList>
-                    <li>
-                    <a  href="https://www.instagram.com/" target="_blank"
-                  rel="noopener noreferrer nofollow"> 
-                    <SocialLink src={instagramIcon} alt="instagramIcon" fill/>
-                  </a>
-                    </li>
-                    <li>
-                    <a  href="https://desktop.telegram.org/?setln=en" target="_blank"
-                  rel="noopener noreferrer nofollow"> 
-                    <img src={telegramIcon} alt="telegramIcon"/>
-                  </a>
-                    </li>
-                    <li>
-                    <a  href="https://www.youtube.com/" target="_blank"
-                  rel="noopener noreferrer nofollow"> 
-                    <img src={youtubeIcon} alt="youtubeIcon"/>
-                  </a>
-                    </li>
+                    <ListItem>
+                    <Link  href="https://www.instagram.com/" target="_blank" 
+                  rel="noopener noreferrer nofollow" fill={props.fill}> 
+                <SocialLink width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.4969 8.66503C10.3853 8.66503 8.66201 10.3883 8.66201 12.5C8.66201 14.6117 10.3853 16.335 12.4969 16.335C14.6085 16.335 16.3318 14.6117 16.3318 12.5C16.3318 10.3883 14.6085 8.66503 12.4969 8.66503ZM23.9987 12.5C23.9987 10.9119 24.0131 9.33824 23.9239 7.75304C23.8347 5.9118 23.4147 4.27769 22.0683 2.93128C20.7191 1.582 19.0879 1.16484 17.2467 1.07566C15.6586 0.986471 14.085 1.00086 12.4998 1.00086C10.9117 1.00086 9.33808 0.986471 7.75292 1.07566C5.91171 1.16484 4.27763 1.58488 2.93125 2.93128C1.58199 4.28057 1.16484 5.9118 1.07565 7.75304C0.986471 9.34112 1.00086 10.9148 1.00086 12.5C1.00086 14.0852 0.986471 15.6618 1.07565 17.247C1.16484 19.0882 1.58486 20.7223 2.93125 22.0687C4.28051 23.418 5.91171 23.8352 7.75292 23.9243C9.34096 24.0135 10.9146 23.9991 12.4998 23.9991C14.0878 23.9991 15.6615 24.0135 17.2467 23.9243C19.0879 23.8352 20.7219 23.4151 22.0683 22.0687C23.4176 20.7194 23.8347 19.0882 23.9239 17.247C24.016 15.6618 23.9987 14.0881 23.9987 12.5ZM12.4969 18.4006C9.23164 18.4006 6.59641 15.7653 6.59641 12.5C6.59641 9.23467 9.23164 6.59939 12.4969 6.59939C15.7622 6.59939 18.3974 9.23467 18.3974 12.5C18.3974 15.7653 15.7622 18.4006 12.4969 18.4006ZM18.6391 7.73578C17.8767 7.73578 17.261 7.12012 17.261 6.35773C17.261 5.59534 17.8767 4.97967 18.6391 4.97967C19.4014 4.97967 20.0171 5.59534 20.0171 6.35773C20.0173 6.53876 19.9818 6.71806 19.9127 6.88535C19.8435 7.05265 19.742 7.20466 19.614 7.33266C19.486 7.46067 19.334 7.56217 19.1667 7.63135C18.9994 7.70052 18.8201 7.73601 18.6391 7.73578Z" fill="#FBFDFF"/>
+</SocialLink> 
+                  </Link>
+                    </ListItem>
+                    <ListItem>
+                    <Link  href="https://desktop.telegram.org/?setln=en" target="_blank" 
+                  rel="noopener noreferrer nofollow" fill={props.fill}> 
+                   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M24 12.5C24 18.8509 18.8509 24 12.5 24C6.14913 24 1 18.8509 1 12.5C1 6.14913 6.14913 1 12.5 1C18.8509 1 24 6.14913 24 12.5ZM12.9121 9.48987C11.7937 9.95467 9.55792 10.9178 6.20567 12.3783C5.66133 12.5949 5.37575 12.8067 5.34987 13.0137C5.30579 13.3644 5.74471 13.5024 6.34079 13.6893C6.42225 13.7152 6.50658 13.741 6.59283 13.7698C7.18029 13.9605 7.96996 14.1838 8.38013 14.1924C8.75292 14.2001 9.16883 14.0468 9.62788 13.7324C12.7597 11.6174 14.3764 10.5488 14.478 10.5258C14.5499 10.5095 14.6495 10.4885 14.7166 10.5488C14.7837 10.6082 14.777 10.7213 14.7703 10.752C14.7262 10.937 13.007 12.5364 12.1157 13.3644C11.8378 13.6222 11.6413 13.8053 11.6011 13.8474C11.511 13.9404 11.419 14.0295 11.3308 14.1148C10.7846 14.64 10.3763 15.0348 11.3538 15.6788C11.8234 15.9883 12.1991 16.2442 12.5738 16.4991C12.983 16.778 13.3912 17.0559 13.9202 17.4028C14.0544 17.491 14.1828 17.582 14.3084 17.6712C14.7847 18.0114 15.213 18.3161 15.742 18.2682C16.0487 18.2395 16.3669 17.951 16.5279 17.0895C16.9083 15.052 17.6577 10.6399 17.8312 8.82096C17.8418 8.66994 17.8353 8.51821 17.812 8.36863C17.7981 8.24781 17.7393 8.13664 17.6472 8.05717C17.5102 7.94504 17.2974 7.92108 17.2016 7.923C16.7694 7.93067 16.1062 8.16162 12.9121 9.48987Z" fill="#FBFDFF"/>
+</svg>
+
+                  </Link>
+                    </ListItem>
+                    <ListItem>
+                    <Link  href="https://www.youtube.com/" target="_blank"
+                  rel="noopener noreferrer nofollow" fill={props.fill}> 
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.4287 5.1225C25 7.35 25 12 25 12C25 12 25 16.65 24.4287 18.8775C24.1112 20.1088 23.1825 21.0775 22.0062 21.405C19.87 22 12.5 22 12.5 22C12.5 22 5.13375 22 2.99375 21.405C1.8125 21.0725 0.885 20.105 0.57125 18.8775C3.72529e-08 16.65 0 12 0 12C0 12 3.72529e-08 7.35 0.57125 5.1225C0.88875 3.89125 1.8175 2.9225 2.99375 2.595C5.13375 2 12.5 2 12.5 2C12.5 2 19.87 2 22.0062 2.595C23.1875 2.9275 24.115 3.895 24.4287 5.1225ZM10 16.375L17.5 12L10 7.625V16.375Z" fill="#FBFDFF"/>
+</svg>
+
+                  </Link>
+                    </ListItem>
                   </SochialList>
     )
 }

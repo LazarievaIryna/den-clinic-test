@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { 
     Header,
     LogoWrapper, 
-    Logo,
+    
     AddressLink,
     ListItem,
     List, 
@@ -16,12 +16,15 @@ import {
     Button,
     
     
+    
 } from "./Header.styled";
 import { SocialList } from "components/SocialList/SocialList";
-import logo from '../../img/fa6-solid_tooth.svg'
-import logoText from '../../img/Vector.svg'
+// import logo from '../../img/fa6-solid_tooth (1).svg'
+// import logoText from '../../img/Vector.svg'
 import phoneImg from '../../img/carbon_phone.svg'
 import { Modal } from 'components/Modal/Modal';
+import { ReactComponent as Logo } from "../../img/Лого.svg";
+
 
 export const HeaderPage=()=>{
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,8 +38,10 @@ export const HeaderPage=()=>{
     return(<>
         <Header>
         <LogoWrapper to="/" end>
-        <Logo src={logo} alt="logo"/>
-        <img src={logoText} alt="den clinic logo"/>
+        <Logo  />
+        
+        {/* <Logo src={logoText} alt="den clinic logo"/> */}
+        
           </LogoWrapper>
           <AddressWrapper>
             <List>
@@ -75,7 +80,7 @@ export const HeaderPage=()=>{
             (098)251 01 11</ContactLink>
             </ContactItem>
           </ContactWrapper>
-          <SocialList/>
+          <SocialList fill="#1D779F"/>
           
           <Button type="button" onClick={()=>{setIsModalOpen(true)}}>Замовити дзвінок</Button>
           {isModalOpen && <Modal onClose={closeModal} />}

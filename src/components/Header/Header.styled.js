@@ -23,9 +23,16 @@ export const LogoWrapper = styled(NavLink)`
   margin: 0;
   margin-right: 76px;
   height: 50px;
+ &:hover{
+    fill: black;
+  }
+  
+
+
 `;
 export const Logo= styled.img`
-margin-right: 6px;`;
+margin-right: 6px;
+`;
 
 
 
@@ -34,9 +41,12 @@ text-decoration: none;
 font-style: normal;
 font-size: 16px;
 color: #FBFDFF;
-&:hover{
-  text-decoration: underline;
-}
+&:hover,
+&:focus
+{
+  color:  #1D779F;
+};
+
 `;
 export const ListItem= styled.li`
 list-style: none;
@@ -68,6 +78,10 @@ font-size: 16px;
 color: #FBFDFF;
 display: flex;
 align-items: center;
+&:hover,
+&:focus{
+  color: #1D779F;
+}
     `;
 
 export const ContactImg=styled.img`
@@ -85,7 +99,8 @@ border-radius: 4px;
 font-size: 18px;
 color: #FBFDFF;
 cursor: pointer;
-&:hover{
+&:hover,
+&:focus{
   background-color: #1D779F;
 }
 `

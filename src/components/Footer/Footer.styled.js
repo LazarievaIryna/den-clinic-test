@@ -27,6 +27,10 @@ margin-right: 6px;`;
 export const Link= styled(NavLink)`
 font-size:16px;
 color: #FBFDFF;
+&:hover,
+&:focus{
+  color: #39ADE0;
+}
 `;
 export const AboutList= styled.div`
 margin-right: 99px;
@@ -41,8 +45,8 @@ flex-direction: column;
 gap: 10px;
 `;
 export const PromotionWrapper=styled.div`
-display: flex;
-height: 47px;
+/* display: flex; */
+height: 20px;
 margin-right: 88px;
 `;
 export const LicenseWrapper=styled.div`

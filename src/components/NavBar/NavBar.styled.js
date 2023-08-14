@@ -21,7 +21,8 @@ export const NavigationLink=styled(NavLink)`
 text-decoration: none;
 color: #133A4B;
 font-size: 16px;
-&:hover{
+&:hover,
+&:focus{
     color: #39ADE0;
 }
 `;
@@ -42,7 +43,8 @@ export const Link=styled(NavLink)`
 
 font-size: 16px;
 color: #133A4B;
-&:hover{
+&:hover,
+&:focus{
     color: #39ADE0;
     text-decoration: underline;
 }

@@ -62,12 +62,18 @@ border-color: #FBFDFF;
 border-radius: 4px;
 font-size: 18px;
 color: #FBFDFF;
-cursor: pointer;`
+cursor: pointer;
+&:hover,
+    &:focus{
+        background-color: #1D779F;
+    }
+`
 
 export const ButtonWrapper=styled.div`
 display: flex;
 justify-content: center;
 margin-top: 10px;
+
 `
 export const LabelNumber=styled.div`
 /* margin-bottom: 15px; */
@@ -93,4 +99,8 @@ position: absolute;
 right: 18px;
     top: 10px;
     cursor: pointer;
+    &:hover,
+    &:focus{
+        color: #1D779F;
+    }
 `
