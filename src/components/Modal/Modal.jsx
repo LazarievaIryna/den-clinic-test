@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 
+
 import {ModalWrapper, ModalContent, Label, Form, Title, Input, Button, ButtonWrapper, LabelNumber, NumberText, CloseIcon} from './Modal.styled'
 export const Modal=({onClose})=>{
     const [name, setName] = useState('');
@@ -11,13 +12,14 @@ export const Modal=({onClose})=>{
         event.preventDefault();
  const user={name, number}
  console.log(user)
+ 
        
         if(user){
           setDisabled(true)
         }
         
         reset();
-        onClose(true)
+        onClose()
     }
     
     const handleNameChange = event => {
@@ -32,12 +34,21 @@ export const Modal=({onClose})=>{
         setNumber('');
 
     }
+    
+  const handleKeyDown = (event) => {
+console.log(event.key)
+    if (event.key === 'Escape') {
    
+      onClose();
+      // console.log(event)
+    }
+  };
+ 
 
     return(
-        <ModalWrapper>
-            <ModalContent>
-              <CloseIcon onClick={onClose}/>
+        <ModalWrapper >
+            <ModalContent onKeyDown={handleKeyDown} tabIndex="0">
+              <CloseIcon onClick={onClose} />
                 <Title>Залиште Ваші контактні дані</Title>
                 <Form onSubmit={handleSubmit} >
                 <Label>

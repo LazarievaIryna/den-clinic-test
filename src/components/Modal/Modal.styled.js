@@ -10,6 +10,8 @@ position: fixed;
   display: flex;
   justify-content: center;
     align-items: center;
+    z-index: 998;
+    
    
 `
 export const ModalContent=styled.div`
@@ -17,7 +19,7 @@ export const ModalContent=styled.div`
   padding: 20px;
   background-color: #39ADE0;
   border-radius: 8px;
-  
+ 
 `
 export const Label=styled.div`
 margin-bottom: 30px;

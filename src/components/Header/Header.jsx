@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+// import { useEffect } from 'react';
+// import {noScroll} from 'no-scroll'
 import { 
     Header,
     LogoWrapper, 
@@ -29,10 +30,15 @@ import { ReactComponent as Logo } from "../../img/Лого.svg";
 export const HeaderPage=()=>{
   const [isModalOpen, setIsModalOpen] = useState(false);
 
- 
 
-  const closeModal = () => {
+   const openModal=(evt)=>{
+    setIsModalOpen(true)
+   }
+
+  const closeModal = (evt) => {
+   
     setIsModalOpen(false);
+    
   };
   
     return(<>
@@ -82,7 +88,9 @@ export const HeaderPage=()=>{
           </ContactWrapper>
           <SocialList fill="#1D779F"/>
           
-          <Button type="button" onClick={()=>{setIsModalOpen(true)}}>Замовити дзвінок</Button>
+          <Button type="button" onClick={openModal}
+            
+          >Замовити дзвінок</Button>
           {isModalOpen && <Modal onClose={closeModal} />}
 
     </Header>
