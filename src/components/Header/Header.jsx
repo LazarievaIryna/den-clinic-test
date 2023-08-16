@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 // import { useEffect } from 'react';
 // import {noScroll} from 'no-scroll'
+// import useScrollBlock from '../Utils/useScrollBlock'
+
+
 import { 
     Header,
     LogoWrapper, 
@@ -27,17 +30,21 @@ import { Modal } from 'components/Modal/Modal';
 import { ReactComponent as Logo } from "../../img/Лого.svg";
 
 
+
+
 export const HeaderPage=()=>{
   const [isModalOpen, setIsModalOpen] = useState(false);
 
 
    const openModal=(evt)=>{
-    setIsModalOpen(true)
+    setIsModalOpen(true);
+   
    }
 
   const closeModal = (evt) => {
    
     setIsModalOpen(false);
+    
     
   };
   

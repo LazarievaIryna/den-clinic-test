@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 
 
+
+
 import {ModalWrapper, ModalContent, Label, Form, Title, Input, Button, ButtonWrapper, LabelNumber, NumberText, CloseIcon} from './Modal.styled'
 export const Modal=({onClose})=>{
     const [name, setName] = useState('');
