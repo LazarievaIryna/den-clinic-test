@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/den-clinic-test/static/css/main.fa535f30.css",
-    "main.js": "/den-clinic-test/static/js/main.a031055c.js",
+    "main.js": "/den-clinic-test/static/js/main.948b5420.js",
     "static/media/Rectangle 109.jpg": "/den-clinic-test/static/media/Rectangle 109.846dc4e92a1bd624e303.jpg",
     "static/media/Лого.svg": "/den-clinic-test/static/media/Лого.81ae57fa078b160be316a418edba2384.svg",
     "static/media/Vector.svg": "/den-clinic-test/static/media/Vector.d70c167e88fb0155ee4433e96d7a9e14.svg",
@@ -9,10 +9,10 @@
     "static/media/carbon_phone.svg": "/den-clinic-test/static/media/carbon_phone.0c1a5e51b57d16676443a6bd181f342c.svg",
     "static/media/fa6-solid_tooth.svg": "/den-clinic-test/static/media/fa6-solid_tooth.8a09aa0381bcf0c4d972f86ce8ee532e.svg",
     "main.fa535f30.css.map": "/den-clinic-test/static/css/main.fa535f30.css.map",
-    "main.a031055c.js.map": "/den-clinic-test/static/js/main.a031055c.js.map"
+    "main.948b5420.js.map": "/den-clinic-test/static/js/main.948b5420.js.map"
   },
   "entrypoints": [
     "static/css/main.fa535f30.css",
-    "static/js/main.a031055c.js"
+    "static/js/main.948b5420.js"
   ]
 }
