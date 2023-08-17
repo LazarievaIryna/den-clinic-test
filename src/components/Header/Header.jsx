@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import { useEffect } from 'react';
 // import {noScroll} from 'no-scroll'
 // import useScrollBlock from '../Utils/useScrollBlock'
+import { createGlobalStyle } from 'styled-components';
 
 
 import { 
@@ -34,7 +35,7 @@ import { ReactComponent as Logo } from "../../img/Лого.svg";
 
 export const HeaderPage=()=>{
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  
 
    const openModal=(evt)=>{
     setIsModalOpen(true);
@@ -47,6 +48,13 @@ export const HeaderPage=()=>{
     
     
   };
+  
+const GlobalStyles = createGlobalStyle`
+/* Apply global styles to disable scrolling */
+body {
+  overflow: ${({ isModalOpen }) => (isModalOpen ? 'hidden' : 'auto')};
+}
+`;
   
     return(<>
         <Header>
@@ -99,7 +107,7 @@ export const HeaderPage=()=>{
             
           >Замовити дзвінок</Button>
           {isModalOpen && <Modal onClose={closeModal} />}
-
+          <GlobalStyles isModalOpen={isModalOpen}/>
     </Header>
     </>
     )

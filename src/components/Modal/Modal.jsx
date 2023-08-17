@@ -1,14 +1,38 @@
-import { useState } from 'react';
-
-
-
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 
 import {ModalWrapper, ModalContent, Label, Form, Title, Input, Button, ButtonWrapper, LabelNumber, NumberText, CloseIcon} from './Modal.styled'
+
+const modalRoot = document.querySelector('#modal-root');
 export const Modal=({onClose})=>{
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const [disabled, setDisabled] = useState(false);
+
+   
+
+
+
+    useEffect(() => {
+      const handleKeyDown = e => {
+        if (e.code === 'Escape') {
+          console.log('esc');
+          onClose();
+        }
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    },[onClose]);
+    const handleBackdroapClick = event => {
+      if (event.currentTarget === event.target) {
+        onClose();
+      }
+    };
+    
+    
 
     const handleSubmit=event=>{
         event.preventDefault();
@@ -48,10 +72,11 @@ console.log(event.key)
  
 
     return(
-        <ModalWrapper >
-            <ModalContent onKeyDown={handleKeyDown} tabIndex="0">
+        createPortal(
+          <ModalWrapper onClick={handleBackdroapClick}>
+            <ModalContent onKeyDown={handleKeyDown} tabIndex="0" onClick={(e) => e.stopPropagation()}>
               <CloseIcon onClick={onClose} />
-                <Title>Залиште Ваші контактні дані</Title>
+                <Title >Залиште Ваші контактні дані</Title>
                 <Form onSubmit={handleSubmit} >
                 <Label>
             Ім'я
@@ -64,6 +89,8 @@ console.log(event.key)
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
               onChange={handleNameChange}
+              autoFocus
+              
             />
           </Label>
           <Label>
@@ -91,6 +118,8 @@ console.log(event.key)
             </Form>
             </ModalContent>
             
-        </ModalWrapper>
+        </ModalWrapper>,
+        modalRoot
+        )
     )
 }
