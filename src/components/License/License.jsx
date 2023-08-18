@@ -1,6 +1,6 @@
 import { Wrapper } from "components/Utils/utils.styled"
 export const License =()=>{
     return(
-        <Wrapper><p>License page</p> </Wrapper>
+        <Wrapper><h2>License page</h2> </Wrapper>
     )
 }

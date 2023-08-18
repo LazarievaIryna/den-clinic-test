@@ -2,36 +2,40 @@ import * as React from 'react';
 import { Navigation, NavigationLink, NavigationList, DropDown, Link } from "./NavBar.styled"
 // import { ServiceFirst } from 'components/ServicesList/ServiceFirst';
 export const NavBar=()=>{
-    const [open, setOpen] = React.useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = React.useState(false);
 
-    const handleOpen = () => {
-      setOpen(!open);
-    };
-    // console.log(open)
+  const handleMouseEnter = () => {
+    setIsDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownVisible(false);
+  };
+   
     return(
-        <Navigation>
-                <NavigationList>
+        <Navigation >
+                <NavigationList >
                     <li>
-                        <NavigationLink to="/aboutclinic">Про клініку</NavigationLink>
+                        <NavigationLink to="/aboutclinic" >Про клініку</NavigationLink>
 
                     </li>
 
                     <li> 
                     <div >
-      <NavigationLink onClick={handleOpen}>Наші послуги</NavigationLink>
-      {open ? (
-        <DropDown >
+      <NavigationLink onMouseEnter={handleMouseEnter} >Наші послуги</NavigationLink>
+       
+        {isDropdownVisible && (<DropDown  onMouseLeave={handleMouseLeave} >
           <li >
-            <Link to="/servicefirst" onClick={()=> setOpen(false)}>Послуга 1</Link>
+            <Link to="/servicefirst"  onClick={handleMouseLeave}>Послуга 1</Link>
           </li>
           <li >
-            <Link to="/servicesecond" onClick={()=> setOpen(false)}>Послуга 2</Link>
+            <Link to="/servicesecond"  onClick={handleMouseLeave}>Послуга 2</Link>
           </li>
           <li >
-            <Link to="/servicethird" onClick={()=> setOpen(false)}>Послуга 3</Link>
+            <Link to="/servicethird" onClick={handleMouseLeave}>Послуга 3</Link>
           </li>
-        </DropDown>
-      ) : null}
+        </DropDown>)}
+     
       
     </div>
                         </li>
