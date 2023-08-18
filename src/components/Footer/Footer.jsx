@@ -26,8 +26,8 @@ export const Footer =()=>{
                   </FooterLinkList>
                   <SocialList fill="#39ADE0"/>
                   <LicenseWrapper>
-                    <Link>Ліцензії</Link>
-                    <Link>Політика конфіденційності</Link>
+                    <Link to="/license">Ліцензії</Link>
+                    <Link to="/privacy">Політика конфіденційності</Link>
                   </LicenseWrapper>
 
 

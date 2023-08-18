@@ -12,6 +12,7 @@ import { Promotion } from './Promotion/Promotion';
 import { License } from './License/License';
 import { Registration } from './Registration/Registration';
 import { Services } from './Services/Services';
+import { Privacy } from './Privacy/Privacy';
 
 export const App = () => {
   return (
@@ -31,6 +32,7 @@ export const App = () => {
         {/* <Route path="/promotion" element={<Promotion/>} /> */}
         <Route path="/registration" element={<Registration/>} />
         <Route path="/services" element={<Services/>} />
+        <Route path="/privacy" element={<Privacy/>} />
        
       </Route>
     </Routes>
